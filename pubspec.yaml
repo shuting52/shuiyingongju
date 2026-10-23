@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the
 # build suffix.
-version: 3.3.4+23
+version: 3.3.5+24
 
 environment:
   sdk: ^3.13.3
@@ -117,10 +117,6 @@ flutter:
     - 深色模式历史板块/
     - 下载二次弹窗浅色模式/
     - 下载二次弹窗深色模式/
-    # 「关于本APP」页彩蛋。laugh.webp 是动图(95 帧 / 3.17s),
-    # laugh_still.webp 就是它的第 0 帧,两者同尺寸,切换时像素重合。
-    # 换素材后用 tool/probe_animated.py 复测(透明通道、帧间隔、首末帧差)。
-    - assets/easter-egg/
     # 「发现」tab:做图指令 JSON + 车标图片,移植自 10-05landezhaole(懒得找了)
     - assets/lzdz/image_prompts.json
     - assets/lzdz/car_logos/

@@ -105,23 +105,6 @@ open class MainActivity : FlutterActivity() {
     override fun onResume() {
         super.onResume()
         applyAppNightMode(this, null)
-        // 兜底:老版本升上来、或换主题后进程没走过 setThemeMode 的,
-        // 回到前台时把启动入口对到当前这一档,下次冷启动就是对的。
-        syncLaunchEntry(this, null)
-    }
-
-    /**
-     * 只在系统确认界面已经隐藏后同步 launcher 入口。
-     *
-     * 主题切换本身也可能触发 onStop/onStart;如果在那里禁用当前 Activity,
-     * 部分 ROM 会把应用送进“应用信息”页。TRIM_MEMORY_UI_HIDDEN 只在真正离开
-     * 前台后回调,此时切换入口不会影响当前可见任务。
-     */
-    override fun onTrimMemory(level: Int) {
-        super.onTrimMemory(level)
-        if (level >= TRIM_MEMORY_UI_HIDDEN) {
-            syncLaunchEntry(this, null)
-        }
     }
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
@@ -242,9 +225,6 @@ open class MainActivity : FlutterActivity() {
                         val mode = call.argument<String>("mode") ?: "system"
                         storeThemeMode(this, mode)
                         applyAppNightMode(this, mode)
-                        // 启动图看的是"启用了哪个启动入口",不是按应用夜间模式:
-                        // 这里不切,下次冷启动画的还是旧入口那一档。
-                        syncLaunchEntry(this, mode)
                         result.success(null)
                     }
                     else -> result.notImplemented()
