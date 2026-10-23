@@ -32,11 +32,19 @@ jobs:
 
       - run: flutter pub get
 
-      # 发版签名:本仓库没有 keystore,用 debug 签名打 release 包
-      # (Gradle 按 ORG_GRADLE_PROJECT_ 前缀把环境变量当 project property 读)。
+      # 正式签名:keystore 存在仓库 Secrets 里,所有版本共用同一签名,
+      # 否则每次 CI 临时机器生成的 debug 签名都不同,覆盖安装会报"软件包冲突"。
+      - name: 还原签名 keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/release.p12
+          cat > android/key.properties <<EOF
+          storeFile=release.p12
+          storePassword=${{ secrets.KEYSTORE_PASSWORD }}
+          keyAlias=${{ secrets.KEY_ALIAS }}
+          keyPassword=${{ secrets.KEY_PASSWORD }}
+          EOF
+
       - name: 构建 release APK
-        env:
-          ORG_GRADLE_PROJECT_allowDebugSigning: "true"
         run: flutter build apk --release
 
       - name: 发布 Release
@@ -47,6 +55,9 @@ jobs:
           VER="${TAG#v}"
           APK="shuiyingongju-${VER}.apk"
           cp build/app/outputs/flutter-apk/app-release.apk "$APK"
+          # 重打同一 tag 时先删旧 Release,保证幂等(tag 的删建由人工操作,不在这里做,
+          # 否则删 tag 重推会再次触发本 workflow 造成循环)。
+          gh release delete "$TAG" --yes 2>/dev/null || true
           gh release create "$TAG" "$APK" \
             --title "$TAG" \
             --notes "APK 直装即可。更新通道:本仓库 Releases,App 启动时自动检查。"
