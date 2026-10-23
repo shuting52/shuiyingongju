@@ -53,6 +53,10 @@ dependencies:
   # 依赖,不只是测试用的。以前挂在 dev_dependencies 下,靠 flutter_test 的传递依赖
   # 凑着能编;现在生产代码要用,得放在这里。
   crypto: ^3.0.7
+  # 「发现」tab:站点卡片跳转外部浏览器、紧急电话拨号
+  url_launcher: ^6.3.2
+  # 「发现」tab:二维码生成工具
+  qr_flutter: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -117,6 +121,9 @@ flutter:
     # laugh_still.webp 就是它的第 0 帧,两者同尺寸,切换时像素重合。
     # 换素材后用 tool/probe_animated.py 复测(透明通道、帧间隔、首末帧差)。
     - assets/easter-egg/
+    # 「发现」tab:做图指令 JSON + 车标图片,移植自 10-05landezhaole(懒得找了)
+    - assets/lzdz/image_prompts.json
+    - assets/lzdz/car_logos/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

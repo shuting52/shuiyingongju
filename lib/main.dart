@@ -30,6 +30,7 @@ import 'ui/permissions_gate.dart';
 import 'pages/parse.dart';
 import 'pages/history.dart';
 import 'pages/settings.dart';
+import 'lzdz/discover_page.dart';
 import 'ui/glass.dart';
 import 'ui/theme_appearance_page.dart';
 
@@ -822,6 +823,7 @@ class HomeShellState extends State<LiquidGlassDemo>
     final pages = <Widget>[
       ParsePage(app: this),
       HistoryPage(app: this),
+      const DiscoverPage(),
       SettingsPage(app: this),
     ];
     return ValueListenableBuilder<int>(
@@ -841,6 +843,7 @@ class HomeShellState extends State<LiquidGlassDemo>
   static const _tabDefs = <({String icon, String active, String label})>[
     (icon: '未选中24x24-SVG/解析.svg', active: '选中24x24-SVG/解析.svg', label: '解析'),
     (icon: '未选中24x24-SVG/历史.svg', active: '选中24x24-SVG/历史.svg', label: '历史'),
+    (icon: '未选中24x24-SVG/发现.svg', active: '选中24x24-SVG/发现.svg', label: '发现'),
     (icon: '未选中24x24-SVG/设置.svg', active: '选中24x24-SVG/设置.svg', label: '设置'),
   ];
 
