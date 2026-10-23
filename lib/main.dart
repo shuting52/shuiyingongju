@@ -4,7 +4,8 @@ import 'dart:async';
 // 进度环的渐变要 ui.Gradient.linear:widgets 里的 Gradient 是另一套东西
 import 'dart:ui' as ui;
 
-import 'package:flutter/foundation.dart' show ValueListenable, kDebugMode;
+import 'package:flutter/foundation.dart'
+    show ValueListenable, kDebugMode, FlutterErrorDetails;
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -48,11 +49,47 @@ import 'ui/theme_appearance_page.dart';
 // 之前一样)。以后想让老机器也有淡出,按系统版本开关这条路(别默认打开)。
 
 Future<void> main() async {
+  // release 模式下 build/layout/paint 抛异常默认只显示灰盒,看不到原因。
+  // 这里换成显示具体报错,方便定位(只在真的出错时才出现)。
+  ErrorWidget.builder = (details) => _LzErrorView(details: details);
   // 启动编排搬去了 lib/bootstrap.dart:第一帧之前要办的(bootstrap)和首帧之后
   // 才办的(warmUp)分成两档,这里只负责把它们接起来。
   final prefs = await bootstrap();
   runApp(LiquidGlassWidgets.wrap(child: LiquidGlassDemo(prefs: prefs)));
   warmUp();
+}
+
+/// 出错占位:把异常信息直接显示出来,而不是灰盒。
+class _LzErrorView extends StatelessWidget {
+  const _LzErrorView({required this.details});
+
+  final FlutterErrorDetails details;
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark =
+        CupertinoTheme.of(context).brightness == Brightness.dark;
+    return Container(
+      color: isDark ? const Color(0xFF1C1C1E) : const Color(0xFFF2F2F7),
+      padding: const EdgeInsets.all(16),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('页面出错了',
+                style:
+                    TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+            const SizedBox(height: 8),
+            Text(
+              details.exceptionAsString(),
+              style: const TextStyle(
+                  fontSize: 12, color: CupertinoColors.systemRed),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class LiquidGlassDemo extends StatefulWidget {

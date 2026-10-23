@@ -75,15 +75,15 @@ class _DiscoverPageState extends State<DiscoverPage> {
           ),
         ),
         const SizedBox(height: 8),
+        // 三个子页按需渲染:之前用 IndexedStack 时,任一子页 build 抛异常
+        // 会把整个栈(包括当前可见的页)一起带成灰屏;改成只渲染当前页,
+        // 一页挂了不连累其他页,也省内存。
         Expanded(
-          child: IndexedStack(
-            index: _seg,
-            children: const [
-              SitesView(),
-              ToolsView(),
-              SoftwareView(),
-            ],
-          ),
+          child: _seg == 0
+              ? const SitesView()
+              : _seg == 1
+                  ? const ToolsView()
+                  : const SoftwareView(),
         ),
       ],
     );
