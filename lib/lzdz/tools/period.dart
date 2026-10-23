@@ -180,7 +180,7 @@ PeriodForecast buildForecast(List<PeriodRecord> records, PeriodSettings s) {
         if (g >= 15 && g <= 60) gaps.add(g);
       }
     }
-    if (gaps.isNotEmpty()) {
+    if (gaps.isNotEmpty) {
       avgCycle = (gaps.reduce((a, b) => a + b) / gaps.length + 0.5).toInt();
     }
   }
@@ -195,7 +195,7 @@ PeriodForecast buildForecast(List<PeriodRecord> records, PeriodSettings s) {
       if (d >= 1 && d <= 15) lens.add(d);
     }
   }
-  if (lens.isNotEmpty()) {
+  if (lens.isNotEmpty) {
     avgPeriod = (lens.reduce((a, b) => a + b) / lens.length + 0.5).toInt();
   }
 
@@ -254,7 +254,7 @@ class PhaseInfo {
 
 PhaseInfo currentPhase(
     List<PeriodRecord> records, PeriodForecast fc, DateTime today) {
-  if (records.isEmpty()) return const PhaseInfo('开始记录吧', '添加第一条经期记录，开启智能预测', 0);
+  if (records.isEmpty) return const PhaseInfo('开始记录吧', '添加第一条经期记录，开启智能预测', 0);
   for (final r in records) {
     final s = _parse(r.startDate);
     final e = _parse(r.endDate);
@@ -400,7 +400,7 @@ class _PeriodToolPageState extends State<PeriodToolPage> {
     for (final r in sorted) {
       sb.write(
           '${r.startDate}→${r.endDate} 流量${r.flow >= 0 && r.flow < _flowLabels.length ? _flowLabels[r.flow] : '?'}');
-      if (r.symptoms.isNotEmpty()) sb.write(' ${r.symptoms.join('/')}');
+      if (r.symptoms.isNotEmpty) sb.write(' ${r.symptoms.join('/')}');
       if (r.note.isNotBlank) sb.write(' ${r.note}');
       sb.writeln();
     }
@@ -1319,8 +1319,10 @@ class _PeriodSettingsDialogState extends State<_PeriodSettingsDialog> {
               controller: TextEditingController(text: _cycleLen)
                 ..selection =
                     TextSelection.collapsed(offset: _cycleLen.length),
-              onChanged: (v) => _cycleLen =
-                  v.replaceAll(RegExp(r'[^0-9]'), '').take(2).toString(),
+              onChanged: (v) {
+                  final d = v.replaceAll(RegExp(r'[^0-9]'), '');
+                  _cycleLen = d.length > 2 ? d.substring(0, 2) : d;
+                },
               enabled: !_autoCycle,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -1334,8 +1336,10 @@ class _PeriodSettingsDialogState extends State<_PeriodSettingsDialog> {
               controller: TextEditingController(text: _periodLen)
                 ..selection =
                     TextSelection.collapsed(offset: _periodLen.length),
-              onChanged: (v) => _periodLen =
-                  v.replaceAll(RegExp(r'[^0-9]'), '').take(2).toString(),
+              onChanged: (v) {
+                  final d = v.replaceAll(RegExp(r'[^0-9]'), '');
+                  _periodLen = d.length > 2 ? d.substring(0, 2) : d;
+                },
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 labelText: '经期天数',

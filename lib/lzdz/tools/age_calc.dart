@@ -259,7 +259,6 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                           child: TextField(
                             controller: _ageCtrl,
                             keyboardType: TextInputType.number,
-                            singleLine: true,
                             onChanged: (t) {
                               final filtered = t.replaceAll(RegExp(r'[^0-9]'), '');
                               if (filtered != t) {
@@ -302,7 +301,6 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                           child: TextField(
                             controller: _monthCtrl,
                             keyboardType: TextInputType.number,
-                            singleLine: true,
                             onChanged: (t) {
                               final filtered = t.replaceAll(RegExp(r'[^0-9]'), '');
                               final v = filtered.length > 2 ? filtered.substring(0, 2) : filtered;
@@ -330,7 +328,6 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                           child: TextField(
                             controller: _dayCtrl,
                             keyboardType: TextInputType.number,
-                            singleLine: true,
                             onChanged: (t) {
                               final filtered = t.replaceAll(RegExp(r'[^0-9]'), '');
                               final v = filtered.length > 2 ? filtered.substring(0, 2) : filtered;

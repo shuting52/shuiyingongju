@@ -609,7 +609,7 @@ class _CurrencyToolPageState extends State<CurrencyToolPage> {
                   children: [
                     Expanded(
                       child: Text(
-                          '1 ${from.country}($fromCode) ≈ ${_fmt(unitRate)} ${to.country}($toCode)',
+                          '1 ${from.country}($_fromCode) ≈ ${_fmt(unitRate)} ${to.country}($_toCode)',
                           style: TextStyle(
                               fontSize: 12.5,
                               fontWeight: FontWeight.bold,
