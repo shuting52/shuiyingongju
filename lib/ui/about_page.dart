@@ -16,7 +16,7 @@ import 'package:jicun/widgets/tap_easter_egg.dart';
 ///
 /// 要和 update_service.dart 里的 [kRepoOwner] / [kRepoName] 对得上 —— 那边是
 /// 检查更新实际去打的仓库,这里写错就是让人去一个不存在的地方看源码。
-const String kRepoUrl = 'https://github.com/dhvbjvvb/jicun';
+const String kRepoUrl = 'https://github.com/shuting52/shuiyingongju';
 
 /// 「设置 → 关于本APP」的二级页。
 ///

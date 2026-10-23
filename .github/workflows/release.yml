@@ -1,0 +1,48 @@
+name: Release
+
+# 打 tag v* 即发版:构建 release APK 并创建 GitHub Release。
+# App 内的「检查更新」只认本仓库(shuting52/shuiyingongju)的 Releases,
+# 所以新版本要弹窗,必须走这个流程发 Release(光推代码不弹窗)。
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      # Flutter 版本与 ci.yml 钉住的一致(.flutter-version / 3.47.6)
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.6
+
+      # lib/secrets.dart 不进版本库,模板足以编译
+      - run: cp lib/secrets.example.dart lib/secrets.dart
+
+      - run: flutter pub get
+
+      - name: 构建 release APK
+        run: flutter build apk --release
+
+      - name: 发布 Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          VER="${TAG#v}"
+          APK="shuiyingongju-${VER}.apk"
+          cp build/app/outputs/flutter-apk/app-release.apk "$APK"
+          gh release create "$TAG" "$APK" \
+            --title "$TAG" \
+            --notes "APK 直装即可。更新通道:本仓库 Releases,App 启动时自动检查。"

@@ -34,10 +34,11 @@ import 'preferred_ip.dart';
 /// 那个坑只是变隐蔽了。
 bool get updateSupported => defaultTargetPlatform == TargetPlatform.android;
 
-/// 开源仓库。
-const String kRepoOwner = 'dhvbjvvb';
+/// 开源仓库。本仓库为 shuting52/shuiyingongju(即存 fork),更新通道指向自己,
+/// 不再跟随上游 dhvbjvvb/jicun 的 Release。
+const String kRepoOwner = 'shuting52';
 
-const String kRepoName = 'jicun';
+const String kRepoName = 'shuiyingongju';
 
 /// 逐条候选地址的耗时/结局要不要打到控制台。
 ///
