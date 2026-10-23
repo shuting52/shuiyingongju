@@ -181,6 +181,54 @@ class _SitesViewState extends State<SitesView> {
   }
 }
 
+/// 站点图标:实时从网络加载 favicon,失败回退到首字占位。
+class _SiteIcon extends StatelessWidget {
+  const _SiteIcon({required this.site, required this.isDark});
+  final LzSite site;
+  final bool isDark;
+
+  String? get _faviconUrl {
+    if (site.icon.isNotEmpty) return site.icon;
+    final uri = Uri.tryParse(site.url);
+    if (uri == null || uri.host.isEmpty) return null;
+    return 'https://' + uri.host + '/favicon.ico';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Palette.of(isDark);
+    final letter = site.fallback.isNotEmpty
+        ? site.fallback.substring(0, 1)
+        : (site.title.isNotEmpty ? site.title.substring(0, 1) : '站');
+    final placeholder = Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+        color: pal.foreground.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      alignment: Alignment.center,
+      child: Text(letter,
+          style: TextStyle(
+              color: pal.foreground,
+              fontSize: 16,
+              fontWeight: FontWeight.w600)),
+    );
+    final url = _faviconUrl;
+    if (url == null) return placeholder;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Image.network(
+        url,
+        width: 40,
+        height: 40,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => placeholder,
+      ),
+    );
+  }
+}
+
 class _SiteCard extends StatelessWidget {
   const _SiteCard({
     required this.site,
@@ -203,28 +251,7 @@ class _SiteCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           child: Row(
             children: [
-              // 首字头像
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: pal.foreground.withValues(alpha: 0.08),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  site.fallback.isNotEmpty
-                      ? site.fallback.substring(0, 1)
-                      : (site.title.isNotEmpty
-                          ? site.title.substring(0, 1)
-                          : '站'),
-                  style: TextStyle(
-                    color: pal.foreground,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
+              _SiteIcon(site: site, isDark: isDark),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(

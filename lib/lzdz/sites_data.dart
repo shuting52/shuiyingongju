@@ -51,164 +51,7 @@ const List<LzCategory> kLzCategories = [
       LzSite(
         id: 'site_new_onsolo', title: 'OnSolo', url: 'https://onsolo.ai/',
         icon: 'https://onsolo.ai/favicon.ico', fallback: 'Solo', badge: 'NEW', desc: 'IP智能体驱动的AI短剧剧本与短视频故事创作平台，将灵感秒级转化为影视分镜与剧本', sub: 'creative', hl: '专精IP微调的智能体与Skills；一键输入灵感生成视频就绪（Video-Ready）剧本与镜头语言；大幅缩短短剧与短篇叙事孵化周期',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+      ),      LzSite(
         id: 'ind_cb_2', title: 'MultiOn', url: 'https://www.multion.ai',
         fallback: 'MO', badge: 'AI浏览器', desc: '自主替你在云端浏览器中订票、购物、填表与处理网页任务的AI代理', sub: 'agent',
       ),
@@ -972,68 +815,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('video', '视频生成'),
       LzSub('platform', '聚合平台'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_cc_4', title: '青椒云电脑', url: 'https://www.qingjiaocloud.com',
         fallback: '青椒', badge: 'AIGC云工作站', desc: '预装Stable Diffusion、Blender、Unreal的视觉设计师专属高配GPU云电脑', sub: 'platform',
       ),
@@ -1195,41 +977,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('skill', 'Skill社区'),
       LzSub('gallery', '灵感画廊'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_tech_29', title: 'OpenArt AI', url: 'https://openart.ai',
         fallback: 'OA', badge: '千万级Midjourney/SD提示词库与ComfyUI云工作流', desc: '硅谷前Google团队打造，提供角色一致性漫画面板生成、创意草图转绘与海量可一键运行的云端ComfyUI流', sub: 'gallery',
       ),
@@ -1275,95 +1023,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('dev', '极客工具'),
       LzSub('daily', '日常百宝箱'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_cb_1', title: 'Browserbase', url: 'https://www.browserbase.com',
         fallback: 'BB', badge: '云浏览器', desc: '专为AI Agent打造的无头云端浏览器基础设施，支持高并发网页自动化', sub: 'net',
       ),
@@ -1518,119 +1178,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('pan', '网盘'),
       LzSub('anime', '动漫'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-    ],
+    sites: [    ],
   ),
   LzCategory(
     id: 'discounts', name: '省钱助手', desc: '外卖神券 · 咖啡打折 · 滴滴打车 · 特价门票',
@@ -1640,41 +1188,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('drink', '咖啡饮品'),
       LzSub('travel', '出行生活'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_ind_44', title: 'Expedia / Roam Around AI 旅行规划', url: 'https://www.roamaround.io',
         fallback: '旅行', badge: '输入目的地秒出按小时排好的吃喝玩乐特种兵攻略', desc: '告诉AI你想去成都或京都玩5天、预算多少、带不带老人小孩，5秒生成每日路线、必吃地道老店与避坑指南', sub: 'travel',
       ),
@@ -1724,53 +1238,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('wallpaper', '高清壁纸'),
       LzSub('community', '极客社区'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_arch_11', title: '知末网AI建筑', url: 'https://www.znzmo.com',
         fallback: '知末', badge: 'SU模型效果图', desc: '国内百万建筑室内设计师首选的高精SU/3dmax模型库与知末AI建筑灵图生成台', sub: 'soft_hub',
       ),
@@ -1900,32 +1368,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('radio', '网络电台'),
       LzSub('downloader', '歌曲下载'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_av_23', title: '魔音工坊 Moyin', url: 'https://www.moyin.com',
         fallback: '魔音', badge: '短视频影视解说配音王', desc: '抖音百大影视解说博主御用配音神器，拥有『云希』『魔小哥』等上千款极具情绪张力的AI配音员', sub: 'lossless',
       ),
@@ -2019,44 +1462,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('audio_book', '有声听书'),
       LzSub('library', '经典书库'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_av_25', title: '喜马拉雅音剪与珠峰AI', url: 'https://www.ximalaya.com',
         fallback: '喜马', badge: '有声书AI演播平台', desc: '喜马拉雅珠峰音频大模型驱动：单人即可完成多角色有声小说AI配音、呼吸停顿精修与智能母带后期', sub: 'audio_book',
       ),
@@ -2078,53 +1484,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('online_game', '在线秒玩'),
       LzSub('retro', '怀旧模拟器'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_cc_5', title: '顺网云电脑', url: 'https://www.shunwang.com',
         fallback: '顺网', badge: '电竞云显卡', desc: 'RTX40系显卡云端畅玩3A大作与本地跑大模型的低延迟云电脑', sub: 'online_game',
       ),
@@ -2147,71 +1507,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('file_proc', '文件处理'),
       LzSub('img_proc', '图片处理'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_arch_7', title: '浩辰CAD看图王云端', url: 'https://web.gstarcad.com',
         fallback: '浩辰', badge: '网页免装看CAD', desc: '无需安装庞大AutoCAD，浏览器直接极速打开DWG建筑结构图纸测量批注与AI识图', sub: 'web_tool',
       ),
@@ -2265,50 +1561,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('hardware', '硬件检测'),
       LzSub('soft_must', '日常必备'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_tech_11', title: 'Socpk 极客湾移动芯片天梯榜', url: 'https://www.socpk.com',
         fallback: '极客湾', badge: '骁龙天玑苹果A系芯片真实能效曲线横评', desc: 'B站顶流硬核数码团队『极客湾』官方维护：一目了然对比历代手机平板SoC芯片CPU/GPU峰值性能与功耗能效比', sub: 'hardware',
       ),
@@ -2330,56 +1583,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('dev', '极客开发'),
       LzSub('nav_hubs', '导航聚合'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_ind_16', title: '形色识花 / 花伴侣', url: 'https://www.xingseapp.com',
         fallback: '形色', badge: '中科院植物所图库秒识万物花草', desc: '散步踏青随手拍一朵野花或树叶，1秒识别全球上万种植物学名、养护浇水指南与诗词典故', sub: 'fun',
       ),
@@ -2577,35 +1781,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('side_hustle', '副业兼职'),
       LzSub('service', '实用专区'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-    ],
+    sites: [    ],
   ),
   LzCategory(
     id: 'ai_bot_ecosystem', name: 'AI生态与精选工具', desc: '智能体 · 代码开发 · 视觉生成与办公AI全景',
@@ -2617,68 +1793,7 @@ const List<LzCategory> kLzCategories = [
       LzSub('research_eval', '科研评测'),
       LzSub('tools_all', '实用AI'),
     ],
-    sites: [
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
-        id: '', title: '', url: '',
-      ),
-      LzSite(
+    sites: [      LzSite(
         id: 'ind_cb_31', title: 'Browse AI', url: 'https://www.browse.ai',
         fallback: 'BA', badge: '零代码抓取', desc: '点选网页元素即可训练云端机器人24小时监控网站数据变化', sub: 'tools_all',
       ),
