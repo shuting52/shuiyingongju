@@ -615,25 +615,26 @@ class _CarBrandToolPageState extends State<CarBrandToolPage> {
                       ],
                     ),
                     const SizedBox(height: 14),
-                    TextField(
+                    CupertinoTextField(
                       onChanged: (v) => setState(() => _query = v),
-                      decoration: InputDecoration(
-                        hintText: '搜索车标/品牌名，如：大众、宝马、迈巴赫…',
-                        hintStyle: const TextStyle(fontSize: 12),
-                        prefixIcon: Icon(Icons.search,
-                            color: pal.secondary, size: 18),
-                        suffixIcon: _query.isNotEmpty
-                            ? IconButton(
-                                onPressed: () =>
-                                    setState(() => _query = ''),
-                                icon: Icon(Icons.close,
-                                    color: pal.secondary, size: 16),
-                              )
-                            : null,
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14)),
-                        contentPadding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 12),
+                      placeholder: '搜索车标/品牌名，如：大众、宝马、迈巴赫…',
+                      placeholderStyle: const TextStyle(fontSize: 12),
+                      prefix: Icon(Icons.search,
+                          color: pal.secondary, size: 18),
+                      suffix: _query.isNotEmpty
+                          ? GestureDetector(
+                              onTap: () =>
+                                  setState(() => _query = ''),
+                              child: Icon(Icons.close,
+                                  color: pal.secondary, size: 16),
+                            )
+                          : null,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 12),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: pal.secondary.withOpacity(0.35)),
+                        borderRadius: BorderRadius.circular(14),
                       ),
                     ),
                   ],

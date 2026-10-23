@@ -485,7 +485,7 @@ class _CurrencyToolPageState extends State<CurrencyToolPage> {
               isDark: isDark,
               child: Padding(
                 padding: const EdgeInsets.all(14),
-                child: TextField(
+                child: CupertinoTextField(
                   controller: _amountCtrl,
                   keyboardType: const TextInputType.numberWithOptions(
                       decimal: true),
@@ -494,11 +494,10 @@ class _CurrencyToolPageState extends State<CurrencyToolPage> {
                   ],
                   style:
                       TextStyle(color: pal.foreground, fontSize: 16),
-                  decoration: InputDecoration(
-                    labelText: '金额',
-                    labelStyle: TextStyle(color: pal.secondary),
-                    border: InputBorder.none,
-                  ),
+                  placeholder: '金额',
+                  placeholderStyle:
+                      TextStyle(color: pal.secondary, fontSize: 16),
+                  decoration: const BoxDecoration(),
                   onChanged: (_) => setState(() {}),
                 ),
               ),

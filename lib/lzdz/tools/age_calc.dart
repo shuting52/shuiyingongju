@@ -256,7 +256,7 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                         }),
                         const SizedBox(width: 8),
                         Expanded(
-                          child: TextField(
+                          child: CupertinoTextField(
                             controller: _ageCtrl,
                             keyboardType: TextInputType.number,
                             onChanged: (t) {
@@ -270,17 +270,13 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                                 setState(() => _birthYear = DateTime.now().year - age);
                               }
                             },
-                            decoration: InputDecoration(
-                              labelText: '输入任意年龄 (岁)',
-                              labelStyle: const TextStyle(fontSize: 11),
-                              suffixText: '岁',
-                              suffixStyle: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFFE23A3A)),
-                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Color(0xFFE23A3A)),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                            placeholder: '输入任意年龄 (岁)',
+                            placeholderStyle: const TextStyle(fontSize: 11),
+                            suffix: const Text('岁', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFFE23A3A))),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: const Color(0xFFE23A3A).withOpacity(0.35)),
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                         ),
@@ -298,7 +294,7 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                         Text('出生', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: pal.secondary)),
                         const SizedBox(width: 6),
                         Expanded(
-                          child: TextField(
+                          child: CupertinoTextField(
                             controller: _monthCtrl,
                             keyboardType: TextInputType.number,
                             onChanged: (t) {
@@ -311,21 +307,18 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                               final m = int.tryParse(v);
                               if (m != null) setState(() => _birthMonth = m.clamp(1, 12));
                             },
-                            decoration: InputDecoration(
-                              labelText: '月份',
-                              labelStyle: const TextStyle(fontSize: 10),
-                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Color(0xFFFF8A3D)),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                            placeholder: '月份',
+                            placeholderStyle: const TextStyle(fontSize: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: const Color(0xFFFF8A3D).withOpacity(0.35)),
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                         ),
                         const SizedBox(width: 8),
                         Expanded(
-                          child: TextField(
+                          child: CupertinoTextField(
                             controller: _dayCtrl,
                             keyboardType: TextInputType.number,
                             onChanged: (t) {
@@ -338,15 +331,12 @@ class _AgeCalcToolPageState extends State<AgeCalcToolPage> {
                               final d = int.tryParse(v);
                               if (d != null) setState(() => _birthDay = d.clamp(1, 31));
                             },
-                            decoration: InputDecoration(
-                              labelText: '日期',
-                              labelStyle: const TextStyle(fontSize: 10),
-                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Color(0xFFFF8A3D)),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                            placeholder: '日期',
+                            placeholderStyle: const TextStyle(fontSize: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: const Color(0xFFFF8A3D).withOpacity(0.35)),
+                              borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                         ),

@@ -70,23 +70,23 @@ class _SitesViewState extends State<SitesView> {
             isDark: isDark,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
-              child: TextField(
+              child: CupertinoTextField(
                 controller: _searchCtrl,
-                decoration: InputDecoration(
-                  hintText: '搜索 ${kLzCategories.fold<int>(0, (a, c) => a + c.sites.length)} 个站点…',
-                  hintStyle: TextStyle(color: pal.secondary, fontSize: 14),
-                  border: InputBorder.none,
-                  icon: Icon(Icons.search, color: pal.secondary, size: 20),
-                  suffixIcon: _query.isEmpty
-                      ? null
-                      : IconButton(
-                          icon: Icon(Icons.clear, color: pal.secondary, size: 18),
-                          onPressed: () {
-                            _searchCtrl.clear();
-                            setState(() => _query = '');
-                          },
-                        ),
-                ),
+                placeholder: '搜索 ${kLzCategories.fold<int>(0, (a, c) => a + c.sites.length)} 个站点…',
+                placeholderStyle:
+                    TextStyle(color: pal.secondary, fontSize: 14),
+                prefix: Icon(Icons.search, color: pal.secondary, size: 20),
+                suffix: _query.isEmpty
+                    ? null
+                    : GestureDetector(
+                        onTap: () {
+                          _searchCtrl.clear();
+                          setState(() => _query = '');
+                        },
+                        child: Icon(Icons.clear,
+                            color: pal.secondary, size: 18),
+                      ),
+                decoration: const BoxDecoration(),
                 style: TextStyle(color: pal.foreground, fontSize: 14),
                 onChanged: (v) => setState(() => _query = v),
               ),

@@ -607,7 +607,7 @@ class _RecordSheetState extends State<_RecordSheet> {
             Row(
               children: [
                 Expanded(
-                  child: TextField(
+                  child: CupertinoTextField(
                     controller: TextEditingController(text: _normalH)
                       ..selection = TextSelection.collapsed(
                           offset: _normalH.length),
@@ -615,15 +615,17 @@ class _RecordSheetState extends State<_RecordSheet> {
                         v.replaceAll(RegExp(r'[^0-9.]'), ''),
                     keyboardType: const TextInputType.numberWithOptions(
                         decimal: true),
-                    decoration: const InputDecoration(
-                      labelText: '正班时长(小时)',
-                      border: OutlineInputBorder(),
+                    placeholder: '正班时长(小时)',
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: CupertinoColors.systemGrey4),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
                 const SizedBox(width: 10),
                 Expanded(
-                  child: TextField(
+                  child: CupertinoTextField(
                     controller: TextEditingController(text: _overtimeH)
                       ..selection = TextSelection.collapsed(
                           offset: _overtimeH.length),
@@ -631,23 +633,27 @@ class _RecordSheetState extends State<_RecordSheet> {
                         v.replaceAll(RegExp(r'[^0-9.]'), ''),
                     keyboardType: const TextInputType.numberWithOptions(
                         decimal: true),
-                    decoration: const InputDecoration(
-                      labelText: '加班时长(小时)',
-                      border: OutlineInputBorder(),
+                    placeholder: '加班时长(小时)',
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: CupertinoColors.systemGrey4),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 10),
-            TextField(
+            CupertinoTextField(
               controller: TextEditingController(text: _note)
                 ..selection =
                     TextSelection.collapsed(offset: _note.length),
               onChanged: (v) => _note = v,
-              decoration: const InputDecoration(
-                labelText: '备注（可选）',
-                border: OutlineInputBorder(),
+              placeholder: '备注（可选）',
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: CupertinoColors.systemGrey4),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             const SizedBox(height: 16),
@@ -1022,16 +1028,17 @@ class _SettingsTabState extends State<_SettingsTab> {
 
   Widget _salaryField(
       String label, String value, void Function(String) onChanged) {
-    return TextField(
+    return CupertinoTextField(
       controller: TextEditingController(text: value)
         ..selection = TextSelection.collapsed(offset: value.length),
       onChanged: (v) => onChanged(v.replaceAll(RegExp(r'[^0-9.]'), '')),
       keyboardType:
           const TextInputType.numberWithOptions(decimal: true),
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle: const TextStyle(fontSize: 12),
-        border: const OutlineInputBorder(),
+      placeholder: label,
+      placeholderStyle: const TextStyle(fontSize: 12),
+      decoration: BoxDecoration(
+        border: Border.all(color: CupertinoColors.systemGrey4),
+        borderRadius: BorderRadius.circular(8),
       ),
     );
   }

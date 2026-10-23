@@ -155,7 +155,7 @@ class _RandomDrawToolPageState extends State<RandomDrawToolPage> {
                       Row(
                         children: [
                           Expanded(
-                            child: TextField(
+                            child: CupertinoTextField(
                               controller: _minCtrl,
                               keyboardType:
                                   const TextInputType.numberWithOptions(
@@ -167,17 +167,22 @@ class _RandomDrawToolPageState extends State<RandomDrawToolPage> {
                               style: TextStyle(
                                   fontSize: 14,
                                   color: pal.foreground),
-                              decoration: InputDecoration(
-                                labelText: '最小值',
-                                labelStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: pal.secondary),
+                              placeholder: '最小值',
+                              placeholderStyle: TextStyle(
+                                  fontSize: 12,
+                                  color: pal.secondary),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color:
+                                        CupertinoColors.systemGrey4),
+                                borderRadius:
+                                    BorderRadius.circular(8),
                               ),
                             ),
                           ),
                           const SizedBox(width: 10),
                           Expanded(
-                            child: TextField(
+                            child: CupertinoTextField(
                               controller: _maxCtrl,
                               keyboardType:
                                   const TextInputType.numberWithOptions(
@@ -189,37 +194,37 @@ class _RandomDrawToolPageState extends State<RandomDrawToolPage> {
                               style: TextStyle(
                                   fontSize: 14,
                                   color: pal.foreground),
-                              decoration: InputDecoration(
-                                labelText: '最大值',
-                                labelStyle: TextStyle(
-                                    fontSize: 12,
-                                    color: pal.secondary),
+                              placeholder: '最大值',
+                              placeholderStyle: TextStyle(
+                                  fontSize: 12,
+                                  color: pal.secondary),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                    color:
+                                        CupertinoColors.systemGrey4),
+                                borderRadius:
+                                    BorderRadius.circular(8),
                               ),
                             ),
                           ),
                         ],
                       ),
                     if (_mode == 3)
-                      TextField(
+                      CupertinoTextField(
                         controller: _namesCtrl,
                         minLines: 4,
                         maxLines: 8,
                         style: TextStyle(
                             fontSize: 14, color: pal.foreground),
-                        decoration: InputDecoration(
-                          labelText: '名单（每行一个名字）',
-                          hintText: '张三\n李四\n王五',
-                          labelStyle: TextStyle(
-                              fontSize: 12, color: pal.secondary),
-                          hintStyle: TextStyle(
-                              fontSize: 13, color: pal.secondary),
-                          border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.circular(12),
-                            borderSide: BorderSide(
-                                color:
-                                    pal.secondary.withOpacity(0.35)),
-                          ),
+                        placeholder: '名单（每行一个名字）',
+                        placeholderStyle: TextStyle(
+                            fontSize: 12, color: pal.secondary),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color:
+                                  pal.secondary.withOpacity(0.35)),
+                          borderRadius:
+                              BorderRadius.circular(12),
                         ),
                       ),
                     const SizedBox(height: 12),

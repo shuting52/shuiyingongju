@@ -1200,14 +1200,15 @@ class _EmergencyPhoneToolPageState extends State<EmergencyPhoneToolPage> {
       Row(
         children: [
           Expanded(
-            child: TextField(
+            child: CupertinoTextField(
               controller: _searchCtrl,
               onChanged: (_) => setState(() {}),
-              decoration: InputDecoration(
-                hintText: '搜索单位名称、电话号码或用途（如：110 / 反诈 / 顺丰）',
-                hintStyle: const TextStyle(fontSize: 11.5),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              placeholder: '搜索单位名称、电话号码或用途（如：110 / 反诈 / 顺丰）',
+              placeholderStyle: const TextStyle(fontSize: 11.5),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
+                borderRadius: BorderRadius.circular(12),
               ),
             ),
           ),

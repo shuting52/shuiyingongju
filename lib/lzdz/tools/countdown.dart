@@ -170,18 +170,13 @@ class _CountdownToolPageState extends State<CountdownToolPage> {
                     ),
                     if (_showAdd) ...[
                       const SizedBox(height: 8),
-                      TextField(
+                      CupertinoTextField(
                         controller: _titleCtrl,
                         style: TextStyle(
                             fontSize: 14, color: pal.foreground),
-                        decoration: InputDecoration(
-                          labelText: '事件名称',
-                          hintText: '如：生日、考试、发工资',
-                          labelStyle: TextStyle(
-                              fontSize: 12, color: pal.secondary),
-                          hintStyle: TextStyle(
-                              fontSize: 13, color: pal.secondary),
-                        ),
+                        placeholder: '事件名称 · 如：生日、考试、发工资',
+                        placeholderStyle: TextStyle(
+                            fontSize: 13, color: pal.secondary),
                       ),
                       const SizedBox(height: 10),
                       OutlinedButton(

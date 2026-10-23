@@ -91,7 +91,7 @@ class _BmiToolPageState extends State<BmiToolPage> {
                         style:
                             TextStyle(fontSize: 12, color: pal.secondary)),
                     const SizedBox(height: 12),
-                    TextField(
+                    CupertinoTextField(
                       controller: _heightCtrl,
                       keyboardType: const TextInputType.numberWithOptions(
                           decimal: true),
@@ -101,17 +101,12 @@ class _BmiToolPageState extends State<BmiToolPage> {
                       ],
                       style:
                           TextStyle(fontSize: 14, color: pal.foreground),
-                      decoration: InputDecoration(
-                        labelText: '身高（厘米）',
-                        hintText: '如：170',
-                        labelStyle: TextStyle(
-                            fontSize: 12, color: pal.secondary),
-                        hintStyle: TextStyle(
-                            fontSize: 13, color: pal.secondary),
-                      ),
+                      placeholder: '身高（厘米） · 如：170',
+                      placeholderStyle: TextStyle(
+                          fontSize: 13, color: pal.secondary),
                     ),
                     const SizedBox(height: 8),
-                    TextField(
+                    CupertinoTextField(
                       controller: _weightCtrl,
                       keyboardType: const TextInputType.numberWithOptions(
                           decimal: true),
@@ -121,14 +116,9 @@ class _BmiToolPageState extends State<BmiToolPage> {
                       ],
                       style:
                           TextStyle(fontSize: 14, color: pal.foreground),
-                      decoration: InputDecoration(
-                        labelText: '体重（千克）',
-                        hintText: '如：65',
-                        labelStyle: TextStyle(
-                            fontSize: 12, color: pal.secondary),
-                        hintStyle: TextStyle(
-                            fontSize: 13, color: pal.secondary),
-                      ),
+                      placeholder: '体重（千克） · 如：65',
+                      placeholderStyle: TextStyle(
+                          fontSize: 13, color: pal.secondary),
                     ),
                     const SizedBox(height: 12),
                     FilledButton(

@@ -85,21 +85,19 @@ class _QrGenToolPageState extends State<QrGenToolPage> {
                         style:
                             TextStyle(fontSize: 12, color: pal.secondary)),
                     const SizedBox(height: 12),
-                    TextField(
+                    CupertinoTextField(
                       controller: _inputCtrl,
                       minLines: 2,
                       maxLines: 4,
                       style:
                           TextStyle(fontSize: 14, color: pal.foreground),
-                      decoration: InputDecoration(
-                        hintText: '粘贴链接或输入文本…',
-                        hintStyle: TextStyle(
-                            fontSize: 13, color: pal.secondary),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide(
-                              color: pal.secondary.withOpacity(0.35)),
-                        ),
+                      placeholder: '粘贴链接或输入文本…',
+                      placeholderStyle: TextStyle(
+                          fontSize: 13, color: pal.secondary),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: pal.secondary.withOpacity(0.35)),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                     ),
                     const SizedBox(height: 12),

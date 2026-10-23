@@ -170,7 +170,7 @@ class _UnitConvertToolPageState extends State<UnitConvertToolPage> {
                       }),
                     ),
                     const SizedBox(height: 12),
-                    TextField(
+                    CupertinoTextField(
                       controller: _inputCtrl,
                       keyboardType: const TextInputType.numberWithOptions(
                           decimal: true, signed: true),
@@ -181,10 +181,13 @@ class _UnitConvertToolPageState extends State<UnitConvertToolPage> {
                       onChanged: (_) => _refresh(),
                       style:
                           TextStyle(fontSize: 14, color: pal.foreground),
-                      decoration: InputDecoration(
-                        labelText: '输入数值',
-                        labelStyle: TextStyle(
-                            fontSize: 12, color: pal.secondary),
+                      placeholder: '输入数值',
+                      placeholderStyle: TextStyle(
+                          fontSize: 12, color: pal.secondary),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: CupertinoColors.systemGrey4),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                     ),
                     const SizedBox(height: 12),

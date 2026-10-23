@@ -1186,17 +1186,18 @@ class _PeriodEditorDialogState extends State<_PeriodEditorDialog> {
               }),
             ),
             const SizedBox(height: 10),
-            TextField(
+            CupertinoTextField(
               controller: TextEditingController(text: _note)
                 ..selection =
                     TextSelection.collapsed(offset: _note.length),
               onChanged: (v) =>
                   _note = v.length > 60 ? v.substring(0, 60) : v,
               maxLength: 60,
-              decoration: const InputDecoration(
-                labelText: '备注（可选）',
-                border: OutlineInputBorder(),
-                counterText: '',
+              placeholder: '备注（可选）',
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: CupertinoColors.systemGrey4),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             if (_error != null)
@@ -1315,7 +1316,7 @@ class _PeriodSettingsDialogState extends State<_PeriodSettingsDialog> {
               ],
             ),
             const SizedBox(height: 4),
-            TextField(
+            CupertinoTextField(
               controller: TextEditingController(text: _cycleLen)
                 ..selection =
                     TextSelection.collapsed(offset: _cycleLen.length),
@@ -1325,14 +1326,16 @@ class _PeriodSettingsDialogState extends State<_PeriodSettingsDialog> {
                 },
               enabled: !_autoCycle,
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: '周期天数（手动）',
-                suffixText: '天',
-                border: OutlineInputBorder(),
+              placeholder: '周期天数（手动）',
+              suffix: const Text('天', style: TextStyle(fontSize: 13)),
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: CupertinoColors.systemGrey4),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             const SizedBox(height: 10),
-            TextField(
+            CupertinoTextField(
               controller: TextEditingController(text: _periodLen)
                 ..selection =
                     TextSelection.collapsed(offset: _periodLen.length),
@@ -1341,10 +1344,12 @@ class _PeriodSettingsDialogState extends State<_PeriodSettingsDialog> {
                   _periodLen = d.length > 2 ? d.substring(0, 2) : d;
                 },
               keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: '经期天数',
-                suffixText: '天',
-                border: OutlineInputBorder(),
+              placeholder: '经期天数',
+              suffix: const Text('天', style: TextStyle(fontSize: 13)),
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: CupertinoColors.systemGrey4),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             const SizedBox(height: 10),

@@ -421,19 +421,21 @@ class _MusicPlayerToolPageState extends State<MusicPlayerToolPage> {
                     Row(
                       children: [
                         Expanded(
-                          child: TextField(
+                          child: CupertinoTextField(
                             onChanged: (v) => _query = v,
                             onSubmitted: (_) => _searchOnline(),
-                            decoration: InputDecoration(
-                              hintText: '歌名 / 歌手',
-                              hintStyle:
-                                  const TextStyle(fontSize: 13),
-                              border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(12)),
-                              contentPadding:
-                                  const EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 12),
+                            placeholder: '歌名 / 歌手',
+                            placeholderStyle:
+                                const TextStyle(fontSize: 13),
+                            padding:
+                                const EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 12),
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Colors.grey
+                                      .withValues(alpha: 0.3)),
+                              borderRadius:
+                                  BorderRadius.circular(12),
                             ),
                           ),
                         ),

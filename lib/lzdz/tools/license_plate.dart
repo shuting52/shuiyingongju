@@ -1019,14 +1019,20 @@ class _LicensePlateToolPageState extends State<LicensePlateToolPage> {
               height: 420,
               child: Column(
                 children: [
-                  TextField(
+                  CupertinoTextField(
                     controller: queryCtrl,
                     onChanged: (_) => setDlg(() {}),
-                    decoration: const InputDecoration(
-                      hintText: '搜索省份名或简称（如：广东 / 粤 / 浙江）',
-                      hintStyle: TextStyle(fontSize: 12),
-                      prefixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
+                    placeholder: '搜索省份名或简称（如：广东 / 粤 / 浙江）',
+                    placeholderStyle: const TextStyle(fontSize: 12),
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(left: 8),
+                      child: Icon(Icons.search, size: 18),
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.grey.withValues(alpha: 0.3)),
+                      borderRadius: const BorderRadius.all(
+                          Radius.circular(12)),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -1124,14 +1130,20 @@ class _LicensePlateToolPageState extends State<LicensePlateToolPage> {
               height: 420,
               child: Column(
                 children: [
-                  TextField(
+                  CupertinoTextField(
                     controller: queryCtrl,
                     onChanged: (_) => setDlg(() {}),
-                    decoration: const InputDecoration(
-                      hintText: '输入全国任意城市名或代号（如：成都 / 粤B / 杭州）',
-                      hintStyle: TextStyle(fontSize: 12),
-                      prefixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
+                    placeholder: '输入全国任意城市名或代号（如：成都 / 粤B / 杭州）',
+                    placeholderStyle: const TextStyle(fontSize: 12),
+                    prefix: const Padding(
+                      padding: EdgeInsets.only(left: 8),
+                      child: Icon(Icons.search, size: 18),
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.grey.withValues(alpha: 0.3)),
+                      borderRadius: const BorderRadius.all(
+                          Radius.circular(12)),
                     ),
                   ),
                   const SizedBox(height: 10),

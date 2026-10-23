@@ -152,12 +152,15 @@ class _LedBannerToolState extends State<_LedBannerTool> {
             Text('手持滚动跑马灯配置',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: pal.foreground)),
             const SizedBox(height: 10),
-            TextField(
+            CupertinoTextField(
               controller: _textCtrl,
-              decoration: InputDecoration(
-                labelText: '输入弹幕大字',
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              placeholder: '输入弹幕大字',
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              decoration: BoxDecoration(
+                border:
+                    Border.all(color: CupertinoColors.systemGrey4),
+                borderRadius: BorderRadius.circular(10),
               ),
             ),
             const SizedBox(height: 10),

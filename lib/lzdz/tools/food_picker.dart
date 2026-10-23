@@ -945,15 +945,16 @@ class _FoodPickerToolPageState extends State<FoodPickerToolPage> {
                   const SizedBox(width: 4),
                   SizedBox(
                     width: 140,
-                    child: TextField(
+                    child: CupertinoTextField(
                       controller: _customCountCtrl,
                       keyboardType: TextInputType.number,
                       onChanged: (_) => setState(() {}),
-                      decoration: InputDecoration(
-                        hintText: '1-10 之间任意数',
-                        hintStyle: const TextStyle(fontSize: 11),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      placeholder: '1-10 之间任意数',
+                      placeholderStyle: const TextStyle(fontSize: 11),
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
+                        borderRadius: BorderRadius.circular(8),
                       ),
                       style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                     ),
@@ -1334,7 +1335,7 @@ class _AddDishDialogState extends State<_AddDishDialog> {
                           }).toList(),
                         ),
                         const SizedBox(height: 8),
-                        TextField(controller: _nameCtrl, decoration: const InputDecoration(labelText: '菜名 *', border: OutlineInputBorder())),
+                        CupertinoTextField(controller: _nameCtrl, placeholder: '菜名 *', decoration: BoxDecoration(border: Border.all(color: Colors.grey.withValues(alpha: 0.3)), borderRadius: BorderRadius.circular(4))),
                         const SizedBox(height: 8),
                         InkWell(
                           onTap: () => setState(() => _showCuisinePicker = true),
@@ -1356,14 +1357,18 @@ class _AddDishDialogState extends State<_AddDishDialog> {
                           ),
                         ),
                         const SizedBox(height: 8),
-                        TextField(controller: _ingCtrl, maxLines: 2, decoration: const InputDecoration(labelText: '配料（例：五花肉、葱、蒜）', border: OutlineInputBorder())),
+                        CupertinoTextField(controller: _ingCtrl, maxLines: 2, placeholder: '配料（例：五花肉、葱、蒜）', decoration: BoxDecoration(border: Border.all(color: Colors.grey.withValues(alpha: 0.3)), borderRadius: BorderRadius.circular(4))),
                         const SizedBox(height: 8),
-                        TextField(controller: _seaCtrl, maxLines: 2, decoration: const InputDecoration(labelText: '调味料（例：生抽、蚝油、白胡椒）', border: OutlineInputBorder())),
+                        CupertinoTextField(controller: _seaCtrl, maxLines: 2, placeholder: '调味料（例：生抽、蚝油、白胡椒）', decoration: BoxDecoration(border: Border.all(color: Colors.grey.withValues(alpha: 0.3)), borderRadius: BorderRadius.circular(4))),
                         const SizedBox(height: 8),
-                        TextField(
+                        CupertinoTextField(
                             controller: _stepsCtrl,
                             maxLines: 4,
-                            decoration: const InputDecoration(labelText: '制作步骤（每行一步）', border: OutlineInputBorder())),
+                            placeholder: '制作步骤（每行一步）',
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
+                              borderRadius: BorderRadius.circular(4),
+                            )),
                       ],
                     ),
                   ),
