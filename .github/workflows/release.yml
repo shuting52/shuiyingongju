@@ -32,7 +32,11 @@ jobs:
 
       - run: flutter pub get
 
+      # 发版签名:本仓库没有 keystore,用 debug 签名打 release 包
+      # (Gradle 按 ORG_GRADLE_PROJECT_ 前缀把环境变量当 project property 读)。
       - name: 构建 release APK
+        env:
+          ORG_GRADLE_PROJECT_allowDebugSigning: "true"
         run: flutter build apk --release
 
       - name: 发布 Release
